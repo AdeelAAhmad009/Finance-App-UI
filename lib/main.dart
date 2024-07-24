@@ -8,13 +8,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final bool isDark = (await SharedPreferences.getInstance()).getBool('isDark') ?? true;
+  final bool isDark =
+      (await SharedPreferences.getInstance()).getBool('isDark') ?? true;
 
   runApp(
     ChangeNotifierProvider(
-      create: (_) => ThemeNotifier(isDark: isDark),
-      child: const MainApp(),
-    ),
+        create: (_) => ThemeNotifier(isDark: isDark), child: const MainApp()),
   );
 }
 
