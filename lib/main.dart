@@ -13,7 +13,9 @@ void main() async {
 
   runApp(
     ChangeNotifierProvider(
-        create: (_) => ThemeNotifier(isDark: isDark), child: const MainApp()),
+      create: (_) => ThemeNotifier(isDark: isDark),
+      child: const MainApp(),
+    ),
   );
 }
 
